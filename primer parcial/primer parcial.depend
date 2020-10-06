@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1601946564 source:d:\fra\lab_prog1\ejercicios\primer parcial\mascotas.c
+	"mascotas.h"
+
+1601946322 source:d:\fra\lab_prog1\ejercicios\primer parcial\razas.c
+	"razas.h"
+
+1601936926 source:d:\fra\lab_prog1\ejercicios\primer parcial\validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1601946322 source:d:\fra\lab_prog1\ejercicios\primer parcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	"mascotas.h"
+	"razas.h"
+
+1601943934 d:\fra\lab_prog1\ejercicios\primer parcial\mascotas_razas.h
+
+1601946195 source:d:\fra\lab_prog1\ejercicios\primer parcial\mascotas_razas.c
+	"mascotas_razas.h"
+
+1601946564 d:\fra\lab_prog1\ejercicios\primer parcial\mascotas.h
+
+1601945243 d:\fra\lab_prog1\ejercicios\primer parcial\razas.h
+
