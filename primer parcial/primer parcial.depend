@@ -25,3 +25,29 @@
 
 1601945243 d:\fra\lab_prog1\ejercicios\primer parcial\razas.h
 
+1601958189 source:c:\practica\primer parcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	"mascotas.h"
+	"razas.h"
+
+1601958189 c:\practica\primer parcial\mascotas.h
+
+1601958189 c:\practica\primer parcial\razas.h
+
+1601958189 source:c:\practica\primer parcial\mascotas.c
+	"mascotas.h"
+
+1601958189 source:c:\practica\primer parcial\mascotas_razas.c
+	"mascotas_razas.h"
+
+1601958189 c:\practica\primer parcial\mascotas_razas.h
+
+1601958189 source:c:\practica\primer parcial\razas.c
+	"razas.h"
+
+1601958189 source:c:\practica\primer parcial\validaciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

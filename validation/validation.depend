@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1602049190 source:c:\users\elena\desktop\practica\validation\main.c
+	<stdio.h>
+	<stdlib.h>
+	"validations.h"
+
+1602047849 c:\users\elena\desktop\practica\validation\validations.h
+
+1602049483 source:c:\users\elena\desktop\practica\validation\validations.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
