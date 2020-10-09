@@ -11,7 +11,10 @@ int V_isStringLetters(char[]);
 int V_isSexMF(char string[]);
 
 int V_inputText(char string[],int size,char text[256],char errorText[256]);
-
+int V_inputTextCL(char string[],int size,char text[256],char errorText[256]);
+int V_inputInteger(char string[],int size,char text[256],char errorText[256],int*pIntNumber);
+int V_inputIntegerMinMax(char string[],int size,char text[256],char errorText[256],int*pIntNumber,int Min,int Max,char MinMaxErrorText[256]);
+int V_inputFloatMinMax(char string[],int size,char text[256],char errorText[256],float*pFloatNumber,float Min,float Max,char MinMaxErrorText[256]);
 
 
 #endif // VALIDATIONS,H_H_INCLUDED

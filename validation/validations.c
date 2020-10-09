@@ -122,13 +122,13 @@ int V_isStringFloat(char string[])//funciona y con numero negativo. Devuelve 0 o
  *
  */
 
-float V_stringToFloat(char string[],float*floatNumber)//toma una cadena, la valida y la pasa a entero
+float V_stringToFloat(char string[],float*pfloatNumber)//toma una cadena, la valida y la pasa a entero
 {
     int outcome = 0;
 
     if (V_isStringFloat(string))
     {
-        *floatNumber=atof(string);
+        *pfloatNumber=atof(string);
     }
     else
     {
@@ -227,18 +227,19 @@ int V_sizeValidation(char string[],int size) //funciona - ve el tamaño  - SEGUND
 int V_inputText(char string[],int size,char text[256],char errorText[256])//1.Pregunta 2.ingreso y guardado en string
 {
     int answer=-1;
-    printf("%s\n",text);
+    printf("%s",text);
     V_ggets(string,size);
     V_sizeValidation(string,size);
     while(!V_isStringLetters(string))
     {
-        printf("%s\n",errorText);
+        printf("%s",errorText);
         V_ggets(string,size);
         V_sizeValidation(string,size);
     }
 }
-int V_firstLetters_toUpper(char string[],int size)
+int V_firstLetters_toUpper(char string[],int size) //capital letter for the first letters of words
 {
+    int answer=-1;
     int i;
     for(i=0; i < size; i++)
     {
@@ -255,5 +256,80 @@ int V_firstLetters_toUpper(char string[],int size)
         }
     }
     return answer=0;
+}
+int V_inputTextCL(char string[],int size,char text[256],char errorText[256])
+{
+    int answer=-1;
+    printf("%s",text);
+    V_ggets(string,size);
+    V_sizeValidation(string,size);
+    V_firstLetters_toUpper(string,size);
+    while(!V_isStringLetters(string))
+    {
+        printf("%s",errorText);
+        V_ggets(string,size);
+        V_sizeValidation(string,size);
+        V_firstLetters_toUpper(string,size);
+    }
+    answer = 0;
+    return answer;
+}
+int V_inputInteger(char string[],int size,char text[256],char errorText[256],int*pIntNumber)
+{
+    int answer=-1;
+    printf("%s",text);
+    V_ggets(string,size);
+    V_sizeValidation(string,size);
+    while(!V_isStringInteger(string))
+    {
+        printf("%s",errorText);
+        V_ggets(string,size);
+        V_sizeValidation(string,size);
+    }
+    V_stringToInteger(string,pIntNumber);
+    return answer = 0;
+}
+int V_inputIntegerMinMax(char string[],int size,char text[256],char errorText[256],int*pIntNumber,int Min,int Max,char MinMaxErrorText[256])
+{
+    int answer=-1;
+    do{
+        printf("%s",text);
+        V_ggets(string,size);
+        V_sizeValidation(string,size);
+        while(!V_isStringInteger(string))
+        {
+            printf("%s",errorText);
+            V_ggets(string,size);
+            V_sizeValidation(string,size);
+        }
+        V_stringToInteger(string,pIntNumber);
+        if (*pIntNumber < Min || *pIntNumber > Max)
+        {
+            printf("%s",MinMaxErrorText);
+        }
 
+    }while (*pIntNumber < Min || *pIntNumber > Max);
+    return answer = 0;
+}
+int V_inputFloatMinMax(char string[],int size,char text[256],char errorText[256],float*pFloatNumber,float Min,float Max,char MinMaxErrorText[256])
+{
+    int answer=-1;
+    do{
+        printf("%s",text);
+        V_ggets(string,size);
+        V_sizeValidation(string,size);
+        while(!V_isStringFloat(string))
+        {
+            printf("%s",errorText);
+            V_ggets(string,size);
+            V_sizeValidation(string,size);
+        }
+        V_stringToFloat(string,pFloatNumber);
+        if (*pFloatNumber < Min || *pFloatNumber > Max)
+        {
+            printf("%s",MinMaxErrorText);
+        }
+
+    }while (*pFloatNumber < Min || *pFloatNumber > Max);
+    return answer = 0;
 }

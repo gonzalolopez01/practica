@@ -11,3 +11,15 @@
 	<stdlib.h>
 	<string.h>
 
+1602223440 source:d:\fra\practica\validation\main.c
+	<stdio.h>
+	<stdlib.h>
+	"validations.h"
+
+1602223191 d:\fra\practica\validation\validations.h
+
+1602223191 source:d:\fra\practica\validation\validations.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
